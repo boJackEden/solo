@@ -17,28 +17,50 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
+	Follow Up
+
   > Name the product in a way the reader (i.e. your target customers) will understand.
 
 ## Sub-Heading ##
+	Never forget to follow up. Never lose an opprotunity. 
+
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
 
 ## Summary ##
+	Follow up is an organizational tool for those on a Job Search. It allows the user to store information about an available position and the jobs they've applied too in one place. At a glace, the user can see which opprotunites they have in thier pipeline and when they should follow up, helping them stay on top of thier job search. 
+
+
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
 
 ## Problem ##
+	The job hunt can be difficult. Keeping track of phone calls and conversations, applications and interviews can be confusing and often people can lose out on opprotunities if they don't remember to call someone back or send thier resume to someone who has requested it. 
+
+
   > Describe the problem your product solves.
 
 ## Solution ##
+	Follow up helps the Job Hunter by giving them a platform for keeping track of all positions they have in thier pipeline and what action is required by them to push the process of getting an offer. It allows the User to document all interations they might have during the job hunt from submitting an application to getting an offer. 
+
+
   > Describe how your product elegantly solves the problem.
 
 ## Quote from You ##
+
+	“If opportunity doesn’t knock, build a door.”
+
+
   > A quote from a spokesperson in your company.
 
 ## How to Get Started ##
+	Download the app and use it everytime you do anything that has to do with a job. 
+
+
   > Describe how easy it is to get started.
 
 ## Customer Quote ##
+	"Using Follow Up cut the time from search to offer in half. Nothing slipped through the cracks."
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
 
 ## Closing and Call to Action ##
+	Download it and give it a try. 
   > Wrap it up and give pointers where the reader should go next.
