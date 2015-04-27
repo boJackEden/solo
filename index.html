@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Follow Up!</title>
+    <!-- load Angular from CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  </head>
+  <body ng-app>
+    <h1>Follow Up</h1>
+    <div class="jobs-container" ng-init="jobs = []">
+      <p>Job Title
+      <input id='title' ng-model="newJob.title">
+      </p>
+      <p>Company
+      <input id='company' ng-model="newJob.company">
+      </p>
+      <p>Status
+      <input id='company' ng-model="newJob.status">
+      </p>
+      <button ng-click="jobs.push(newJob); newJob=''">Add Job</button>
+    </div>
+    <hr>
+    <ul>
+      <li ng-repeat="job in jobs" ng-click="jobs.splice($index, 1)">
+       {{job.title}} + , + {{job.company}} + , + {{job.status}}</li>
+    </ul>
+
+    <pre>
+      {{ job | json }}
+    </pre>
+  </body>
+</html>
