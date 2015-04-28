@@ -1,17 +1,24 @@
-angular.module('app', [])
-//use brackets for declaration, to prevent weirdness when minifying
-.controller('MainController', ['$scope', function($scope){
-  $scope.jobs = [];
+var app = angular.module("GetAJob", ["firebase"]);
+app.controller("jobController", function($scope, $firebaseArray, $firebaseAuth) {
+  var ref = new Firebase("https://followup.firebaseio.com/");
 
-  $scope.addJob = function(job) {
-    $scope.jobs.push(job);
-    $scope.newJob = {
-    	title: title,
-    	company: company,
-    	status: status
+  $scope.jobs = $firebaseArray(ref);
+ 	
+
+  $scope.addJob = function() {
+    $scope.jobs.$add({
+      title: $scope.newJob.title,
+      company: $scope.newJob.company,
+      status: $scope.newJob.status, 
+      nextStep: $scope.newJob.nextStep,
+      email: $scope.newJob.email,
+      phone: $scope.newJob.phone,
+      JD: $scope.newJob.JD
+    });
   };
 
-  $scope.remove = function(index) {
-    $scope.jobs.splice(index, 1);
-  }
-}]);
+});
+
+var d = new Date(year, month, day, hours, minutes);
+
+$('#timeStamp').append('I rock');
