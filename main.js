@@ -1,3 +1,4 @@
+
 var app = angular.module("GetAJob", ["firebase"]);
 app.controller("jobController", function($scope, $firebaseArray, $firebaseAuth) {
   var ref = new Firebase("https://followup.firebaseio.com/");
@@ -17,8 +18,28 @@ app.controller("jobController", function($scope, $firebaseArray, $firebaseAuth) 
     });
   };
 
+  $scope.removeItem = function(index) {
+  	// console.log(index);
+    $scope.jobs.$remove(index);
+    var result = $scope.jobs.splice(index, 1);
+    populateInputs(result[0])
+    // console.log(result[0]);
+
+  }
+
 });
 
-var d = new Date(year, month, day, hours, minutes);
+var populateInputs = function (obj){
+	$('#title').val(obj.title);
+	$('#compName').val(obj.company);
+	$('#status').val(obj.status);
+	$('#nextStep').val(obj.nextStep);
+	$('#email').val(obj.email);
+	$('#phone').val(obj.phone);
+	$('#JD').val(obj.JD);
+};
 
-$('#timeStamp').append('I rock');
+
+
+
+

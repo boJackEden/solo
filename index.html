@@ -3,38 +3,36 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
     <script src="https://cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
     <script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>    
     <script src="main.js"></script>
   </head>
   <body ng-controller="jobController">
     <h1>Follow Up</h1>
 
     <form ng-submit="addJob()">
-      <input placeholder='Job Title' ng-model="newJob.title" />
-      <input placeholder='Company Name' ng-model="newJob.company" />
-      <input placeholder='Status' ng-model="newJob.status" />
-      <input placeholder='Next Step' ng-model="newJob.nextStep" />
-      <input placeholder='Email' ng-model="newJob.email" />
-      <input placeholder='Phone Number' ng-model="newJob.phone" />
 
-      <textarea cols="20" rows="4" ng-model="newJob.JD">Job Description</textarea>
+      <input placeholder='Title' id='title' ng-model="newJob.title" />
+      <input placeholder='Company Name' id='compName' ng-model="newJob.company" />
+      <input placeholder='Status'  id='status' ng-model="newJob.status" />
+      <input placeholder='Next Step' id='nextStep' ng-model="newJob.nextStep" />
+      <input placeholder='Email' id= 'email' ng-model="newJob.email" />
+      <input placeholder='Phone Number' id='phone' ng-model="newJob.phone" />
+
+      <textarea cols="20" rows="4" ng-model="newJob.JD" id='JD'>Job Description</textarea>
       <button type="submit">Add Job</button>
     </form>
     <hr>
-      <div ng-repeat="job in jobs">
+      <div ng-repeat="job in jobs track by $index" ng-click="removeItem($index)">
         <table>
-            <td>{{job.title}}</td>
-            <td>{{job.company}}</td>
-            <td>{{job.status}}</td>
-            <td>{{job.nextStep}}</td>
-            <td>{{job.email}}</td>
-            <td>{{job.phone}}</td>
+            <td>{{job.title}} /</td>-
+            <td>{{job.company}} /</td>-
+            <td>{{job.status}} /</td>-
+            <td>{{job.nextStep}} /</td>-
+            <td>{{job.email}} /</td>-
+            <td>{{job.phone}} /</td>-
             <td>{{job.JD}}</td>
-            <td></td>
         </table>
-        <!-- edit a message -->
-        <!-- <input ng-model="job.text" ng-change="jobs.$save(job)" /> -->
-        <!-- delete a message -->
-        <!-- <button ng-click="jobs.$remove(job)">Delete Job</button> -->
+        
       </div>
   </body>
 </html>
